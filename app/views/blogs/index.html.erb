@@ -1,0 +1,11 @@
+<h1>All the Blogs!</h1>
+<ul>
+  <% @blogs.each do |blog| %>
+    <li> 
+      <a href="<%= blog_url(blog) %>"><%= blog.title %></a> 
+    </li>
+  <% end %>
+  <form action="<%= new_blog_url %>" method="GET">
+    <button>New Blog</button>
+  </form>
+</ul>
